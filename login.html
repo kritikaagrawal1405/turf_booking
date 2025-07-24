@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login / Sign Up</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="login">
@@ -27,52 +28,6 @@
     </div>
   </div>
 
-  <script>
-    let isLogin = true;
-
-    function toggleForm() {
-      isLogin = !isLogin;
-      const title = document.getElementById("form-title");
-      const btn = document.getElementById("submit-btn");
-      const msg = document.getElementById("toggle-msg");
-
-      if (isLogin) {
-        title.innerText = "Login";
-        btn.innerText = "Login";
-        msg.innerHTML = `Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a>`;
-      } else {
-        title.innerText = "Sign Up";
-        btn.innerText = "Sign Up";
-        msg.innerHTML = `Already have an account? <a href="#" onclick="toggleForm()">Login</a>`;
-      }
-    }
-
-    function handleSubmit() {
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value.trim();
-      const role = document.getElementById("role").value;
-
-      if (username === "" || password === "") {
-        alert("Please fill all fields");
-        return;
-      }
-
-      if (isLogin) {
-        // Simple login simulation
-        localStorage.setItem("loggedInUser", username);
-        localStorage.setItem("userRole", role);
-
-        if (role === "admin") {
-          window.location.href = "admin.html";
-        } else {
-          window.location.href = "index.html";
-        }
-      } else {
-        // Simple signup simulation
-        alert("Account created! You can now log in.");
-        toggleForm();
-      }
-    }
-  </script>
+  
 </body>
 </html>

@@ -1,16 +1,4 @@
-<script>
-  const user = localStorage.getItem("loggedInUser");
-  const role = localStorage.getItem("userRole");
 
-  if (!user) {
-    window.location.href = "login.html";
-  }
-
-  // Optional: Redirect admin away from index
-  if (window.location.pathname.includes("index.html") && role === "admin") {
-    window.location.href = "admin.html";
-  }
-</script>
 
 
 <!DOCTYPE html>

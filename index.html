@@ -1,17 +1,3 @@
-<script>
-  const user = localStorage.getItem("loggedInUser");
-  const role = localStorage.getItem("userRole");
-
-  if (!user) {
-    window.location.href = "login.html";
-  }
-
-  // Optional: Redirect admin away from index
-  if (window.location.pathname.includes("index.html") && role === "admin") {
-    window.location.href = "admin.html";
-  }
-</script>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +13,7 @@
     <button class="back-button" onclick="history.back()" style="color: white;">← Back</button>
     <h1>Cartel Bookings</h1>
     <nav>
-      <a href="bookings.html">My Bookings</a>
+      <a href="bokings.html">My Bookings</a>
     </nav>
   </header>
 
@@ -84,7 +70,39 @@
     <a href="turf.html" style="color: aquamarine;">View Slots</a>
     </div>
 
+
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>Cartel</h2>
+      <p>Your Ultimate Sports Booking Destination.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bokings.html">Book Turf</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: support@turfzone.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Location: Mumbai, India</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Cartel. All Rights Reserved.</p>
+  </div>
+</footer>
   </section>
+
+  
 
 </body>
 </html>
