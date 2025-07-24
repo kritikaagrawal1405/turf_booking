@@ -1,0 +1,46 @@
+<script>
+  const user = localStorage.getItem("loggedInUser");
+  const role = localStorage.getItem("userRole");
+
+  if (!user) {
+    window.location.href = "login.html";
+  }
+
+  // Optional: Redirect admin away from index
+  if (window.location.pathname.includes("index.html") && role === "admin") {
+    window.location.href = "admin.html";
+  }
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark-theme">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <button class="back-button" onclick="history.back()">← Back</button>
+    <h1>Admin Panel</h1>
+  </header>
+
+  <section>
+    <h3>Add Turf Slot</h3>
+    <input type="text" placeholder="Turf Name" />
+    <input type="date" />
+    <input type="time" />
+    <button>Add Slot</button>
+
+    <h3>Upcoming Bookings</h3>
+    <div class="booking-card">
+      <h4>Urban Turf</h4>
+      <p>Date: 26 July</p>
+      <p>User: John Doe</p>
+    </div>
+  </section>
+</body>
+</html>

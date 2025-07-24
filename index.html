@@ -1,0 +1,90 @@
+<script>
+  const user = localStorage.getItem("loggedInUser");
+  const role = localStorage.getItem("userRole");
+
+  if (!user) {
+    window.location.href = "login.html";
+  }
+
+  // Optional: Redirect admin away from index
+  if (window.location.pathname.includes("index.html") && role === "admin") {
+    window.location.href = "admin.html";
+  }
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Turf Booking | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark-theme">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <button class="back-button" onclick="history.back()" style="color: white;">← Back</button>
+    <h1>Cartel Bookings</h1>
+    <nav>
+      <a href="bookings.html">My Bookings</a>
+    </nav>
+  </header>
+
+  <section class="hero">                 
+    <div class="container_hero-content">
+      <div class="hero-text">
+        <h1>Book Your Turf in Just a Few Clicks</h1>
+        <p>Choose your favorite turf, select a slot, and you're ready to play. No calls, no waiting!</p>
+      </div>
+    </div>
+  </section>   
+
+  <section class="turfs">
+
+    <div class="turf-card">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/350327019/NU/WB/TZ/38215148/7-a-side-football-turf.jpg" alt="Urban Turf" />
+      <h2>Urban Turf</h2>
+      <p>7-a-side · Free Parking · ₹1,500/hr</p>
+      <a href="turf.html" style="color: aquamarine;">View Slots</a>
+    </div>
+
+    <div class="turf-card">
+      <img src="https://www.dlws.edu.in/blog/images/cricket.png" alt="Galaxy Arena" />
+      <h2>Galaxy Arena</h2>
+      <p>5-a-side · Covered · ₹900/hr</p>
+      <a href="turf.html" style="color: aquamarine;">View Slots</a>
+    </div>
+
+    <div class="turf-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ACRNlF9GOruttZGf3Re3b8mrwrFQFCEJBQ&s">
+        <h3>Elite Turf Arena</h3>
+        <p>Artificial Grass · Floodlights · ₹950/hr</p>
+        <a href= "turf.html" style="color: aquamarine;">View Slots</a>
+    </div>
+
+    <div class="turf-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpoo4nZFNw0KnRckbGR_-oPq7fvXqsLqR0tQ&s">
+    <h3>Victory Sports Ground</h3>
+    <p>5-a-side · Covered · ₹850/hr</p>
+    <a href="turf.html" style="color: aquamarine;">View Slots</a>
+    </div>
+
+    <div class="turf-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIclbXVa6vpPbUMLNaWu73AubBHTYPfwsT4g&s" alt="Turf 6">
+    <h3>Pro Kick Arena</h3>
+    <p>7-a-side · Free Parking · ₹1,200/hr</p>
+    <a href="turf.html" style="color: aquamarine;">View Slots</a>
+    </div>
+
+    <div class="turf-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkLwHMlLNMGj8ixnLi_z5M-DbPzI3GgK2NeUbc74QC5oiBgjKZMq2miyZF8ySPwzwBxVQ&usqp=CAU" alt="Turf 7">
+    <h3>GreenPlay Fields</h3>
+    <p>Outdoor Turf · Water Facility · ₹700/hr</p>
+    <a href="turf.html" style="color: aquamarine;">View Slots</a>
+    </div>
+
+  </section>
+
+</body>
+</html>

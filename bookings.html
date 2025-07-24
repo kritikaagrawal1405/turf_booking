@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Bookings</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark-theme">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <button class="back-button" onclick="history.back()" style="color: white;">← Back</button>
+    <h1>My Bookings</h1>
+  </header>
+
+  <section>
+    <div class="booking-card">
+      <h3>Urban Turf</h3>
+      <p>Date: 25 July 2025</p>
+      <p>Time: 5 PM – 6 PM</p>
+      <p><strong>Status:</strong> Confirmed</p>
+      <button onclick="cancelBooking(this)">Cancel</button>
+      <button onclick="rescheduleBooking(this)">Reschedule</button>
+    </div>
+    <div class="booking-card">
+      <h3>Galaxy Arena</h3>
+      <p>Date: 27 July 2025</p>
+      <p>Time: 8 AM – 9 AM</p>
+      <p><strong>Status:</strong> Confirmed</p>
+      <button onclick="cancelBooking(this)">Cancel</button>
+      <button onclick="rescheduleBooking(this)">Reschedule</button>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Turf Slot</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark-theme">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <button class="back-button" onclick="history.back()" style="color: white;">← Back</button>
+    <h1>Book a Slot</h1>
+  </header>
+
+  <section>
+    <h3>Select a Slot</h3>
+    <div class="date-selector">
+        <label for="booking-date">Select Date:</label>
+        <input type="date" id="booking-date" name="booking-date" required>
+        <button type="button" id="reset-date-btn">Reset</button>
+    </div>
+
+    <div class="slot-grid">
+      <!-- Morning Slots -->
+    <button class="slot" data-time="6:00 AM - 7:00 AM">6:00 AM - 7:00 AM</button>
+    <button class="slot" data-time="7:00 AM - 8:00 AM">7:00 AM - 8:00 AM</button>
+    <button class="slot" data-time="8:00 AM - 9:00 AM">8:00 AM - 9:00 AM</button>
+    <button class="slot" data-time="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</button>
+
+    <button class="slot" data-time="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</button>
+    <button class="slot" data-time="5:00 PM - 6:00 PM">5:00 PM - 6:00 PM</button>
+    <button class="slot" data-time="6:00 PM - 7:00 PM">6:00 PM - 7:00 PM</button>
+    <button class="slot" data-time="7:00 PM - 8:00 PM">7:00 PM - 8:00 PM</button>
+
+    <button class="slot" data-time="8:00 PM - 9:00 PM">8:00 PM - 9:00 PM</button>
+    <button class="slot" data-time="9:00 PM - 10:00 PM">9:00 PM - 10:00 PM</button>
+    <button class="slot" data-time="10:00 PM - 11:00 PM">10:00 PM - 11:00 PM</button>
+    <button class="slot" data-time="11:00 PM - 12:00 AM">11:00 PM - 12:00 AM</button>
+    </div>
+
+    <div class="confirm-container" style="margin: 30px auto; text-align: center;">
+    <button id="confirm-booking" class="confirm-button">Confirm Booking</button>
+    </div>
+  </section>
+</body>
+</html>
